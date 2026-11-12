@@ -1,3 +1,6 @@
+> **URL pack:** `https://github.com/luongminhduc-hittake/chungminh-smp-pack/releases/download/v1/ChungMinh-SMP-ResourcePack.zip`
+> **SHA-1:** `15c9a5c4d14fa044d11ad36a8c93f87700302810`
+
 # Resource pack trên Fabric 26.3 — cần gì để "trơn tru"
 
 Pack [ChungMinh-SMP-ResourcePack.zip](ChungMinh-SMP-ResourcePack.zip) **55% là định dạng
