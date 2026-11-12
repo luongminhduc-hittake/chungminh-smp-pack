@@ -5,6 +5,9 @@ duy nhất để host công khai cho Horizon server tải qua `resource-pack`.
 
 ## Thành phẩm
 
+**URL công khai (GitHub Release):**
+`https://github.com/luongminhduc-hittake/chungminh-smp-pack/releases/download/v1/ChungMinh-SMP-ResourcePack.zip`
+
 | | |
 |---|---|
 | File | `ChungMinh-SMP-ResourcePack.zip` |
@@ -36,6 +39,22 @@ Gộp bằng `cp` thường sẽ ra pack lỗi. Năm vấn đề đã xử lý:
 | `Thumbs.db` lọt vào `textures/block/` | Lọc bỏ |
 | 3 model thiếu key `particle` (`template_wall_inventory_sand`, `short_grass_1`) | Thêm `particle`, hết warning khi load |
 | Mỗi pack có `readme.txt` / `pack.png` riêng | Giữ `pack.png` của pack trên cùng, gộp credit vào `CREDITS.txt` |
+
+## Host công khai
+
+Dùng **GitHub Release**, không dùng MediaFire:
+
+| | GitHub Release | MediaFire |
+|---|---|---|
+| Link trực tiếp | cố định vĩnh viễn | **hết hạn sau ~120 s** |
+| Sau khi hết hạn | vẫn 200 + đúng file | 302 → `download_repair.php` (HTML) |
+| `Content-Type` | `application/octet-stream` | `application/zip` |
+| Redirect | 1 (ổn định) | 0, nhưng token chết |
+| Kiểm chứng từ 3 IP | ✅ | ✅ (trong 120 s) |
+
+**MediaFire không dùng được** làm `resource-pack` URL: Horizon client nhận URL một lần
+lúc start, client tải lúc join. Nếu player join sau ~2 phút kể từ lúc lấy link, họ nhận
+trang HTML thay vì zip → pack fail.
 
 ## Kiểm chứng
 
